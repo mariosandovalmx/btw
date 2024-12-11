@@ -24,8 +24,8 @@ bayestraits <- function (data=NULL, tree=NULL, commands=NULL, silent=TRUE, remov
   
   # CHECK FOR BAYESTRAITS IN WORKING DIRECTORY
   if (windows) {
-    if (!("BayesTraitsV3.exe" %in% list.files())) stop("BayesTraitsV3.exe is not in your current working directory.")
-  } else if (!("BayesTraitsV3" %in% list.files())) stop("BayesTraitsV3 is not in your current working directory.")
+    if (!("BayesTraitsV4.exe" %in% list.files())) stop("BayesTraitsV4.exe is not in your current working directory.")
+  } else if (!("BayesTraitsV4" %in% list.files())) stop("BayesTraitsV4 is not in your current working directory.")
   dir <- getwd()
   
   
@@ -38,19 +38,19 @@ bayestraits <- function (data=NULL, tree=NULL, commands=NULL, silent=TRUE, remov
   # RUN BAYESTRAITS
   if (windows) {
     if (silent) {
-      invisible(shell(paste(paste0(dir, "/BayesTraitsV3.exe"), 
+      invisible(shell(paste(paste0(dir, "/BayesTraitsV4.exe"), 
                   paste0(dir, "/tree.nex"), 
                   paste0(dir, "/data.txt"),
                   paste0("< ", dir, "/inputfile.txt")), intern=TRUE))
     } else {
-      shell(paste(paste0(dir, "/BayesTraitsV3.exe"), 
+      shell(paste(paste0(dir, "/BayesTraitsV4.exe"), 
                   paste0(dir, "/tree.nex"), 
                   paste0(dir, "/data.txt"),
                   paste0("< ", dir, "/inputfile.txt")))
     }
   
   } else {
-    system(paste(paste0(dir, "/BayesTraitsV3"), 
+    system(paste(paste0(dir, "/BayesTraitsV4"), 
                  paste0(dir, "/tree.nex"), 
                  paste0(dir, "/data.txt"),
                  paste0("< ", dir, "/inputfile.txt")), 
