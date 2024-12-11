@@ -1,4 +1,4 @@
-Package: btw
+Package: btwMS
 Type: Package
 Title: Run BayesTraitsV4 from R
 Version: 2.0
